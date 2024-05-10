@@ -42,9 +42,10 @@ void display(vector<string> v)
             }
             if (v[i].length() > gaplength) {
                 reducelength = v[i];
-                while (reducelength.length() > (gaplength-1)) {
+                while (reducelength.length() > (gaplength-4)) {
                     reducelength.pop_back();
                 }
+		reducelength += "...";
             }
             if (reducelength != "") {
                 cout << reducelength << " |" << endl;
@@ -113,5 +114,5 @@ int main()
                 cout << "Invalid choice" << endl;
         }
     } while (choice != 5);
-	return 0;
+    return 0;
 }
